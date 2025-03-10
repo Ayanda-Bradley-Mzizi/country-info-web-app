@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,19 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Country Information Lookup</h1>
+    <header>
+        <h1>Country Information Lookup</h1>
+        <p>Enter a country name below to retrieve information and details about its neighboring countries.</p>
+    </header>
 
-    <input type="text" id="country-input" placeholder="Enter country name">
-    <button id="submit-btn">Search</button>
-
-    <section id="country-info">
-        <!-- Country information will be displayed here -->
+    <section aria-label="Country Search">
+        <h2>Search for a Country</h2>
+        <label for="country-input">Country Name:</label>
+        <input type="text" id="country-input" placeholder="Enter country name">
+        <button id="submit-btn">Search</button>
     </section>
 
-    <section id="bordering-countries">
-        <!-- Bordering countries and their flags will be displayed here -->
-    </section>
+    <main>
+        <section id="country-info" aria-label="Country Information">
+            <h2>Country Information</h2>
+            <!-- Country information will be displayed here -->
+        </section>
 
+        <section id="bordering-countries" aria-label="Bordering Countries">
+            <h2>Bordering Countries</h2>
+            <p>List of neighboring countries and their flags will be shown here.</p>
+            <!-- Bordering countries and their flags will be displayed here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>Data provided by <a href="https://restcountries.com" target="_blank" rel="noopener noreferrer">REST Countries API</a>.</p>
+    </footer>
+
+    <!-- Only include the script once, here -->
     <script src="script.js"></script>
 </body>
 </html>
